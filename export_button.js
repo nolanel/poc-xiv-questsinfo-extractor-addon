@@ -2,7 +2,7 @@ $('#anchor_quest h3').append('<button id="xiv-questinfo-export" style="margin-le
 $("#xiv-questinfo-export").on("click", function() {
     const result = [];
     const baseUrl = window.location.href.split("?")[0];
-    const pageTotal = parseInt($(".btn__pager__current:first").text().split("/")[1]);
+    const pageTotal = parseInt($(".btn__pager__next--all").first().attr("href").split("page=")[1]);
 
     for (let page = 1; page <= pageTotal; page++) {
         let url = baseUrl + "?page=" + page;
