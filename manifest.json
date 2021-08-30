@@ -1,0 +1,16 @@
+{
+
+  "manifest_version": 2,
+  "name": "xiv-questinfo-extractor",
+  "version": "1.0",
+
+  "description": "Add an export button that extract your ffxiv character quest information in csv or json files.",
+
+  "content_scripts": [
+    {
+      "matches": ["*://*.finalfantasyxiv.com/lodestone/character/*/quest*"],
+      "js": ["jquery-3.6.0.min.js", "export_button.js"]
+    }
+  ]
+
+}
